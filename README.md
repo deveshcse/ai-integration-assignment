@@ -24,7 +24,6 @@ It combines:
 - **Swagger/OpenAPI docs** at `/api-docs`.
 - **Seed script** to load HR policy corpus and embeddings.
 - **Integration tests** for ask/auth flow.
-- **Docker support** for local containerized run.
 
 ## Tech Stack
 
@@ -292,16 +291,6 @@ npm test
 ```
 
 Current tests are integration-focused (`src/features/ask/ask.test.ts`) using mocked embedding and LLM calls.
-
-## Docker
-
-```bash
-docker-compose up --build
-```
-
-This starts:
-- MongoDB container
-- App container (builds TypeScript and runs server)
 
 ## Assignment Deliverables Covered
 
