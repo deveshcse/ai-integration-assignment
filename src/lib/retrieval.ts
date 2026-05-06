@@ -52,7 +52,7 @@ export async function retrieveRelevantDocs(question: string, topN: number = 3) {
     const vectorResults = await HrDocumentModel.aggregate([
       {
         $vectorSearch: {
-          index: process.env.MONGODB_VECTOR_INDEX_NAME ?? "default",
+          index: "vector_index",
           path: "embedding",
           queryVector: qEmbedding,
           numCandidates: Math.max(topN * 10, 20),
